@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Learning Wheel Motion Uncertainty | Academic Research</title>
+<meta name="description" content="Learning wheel-motion uncertainty for degeneracy-aware LiDAR-inertial odometry on quadrupedal wheel-legged robots.">
+<link rel="stylesheet" href="bulma.min.css">
+<link rel="stylesheet" href="reference.css">
+<link rel="stylesheet" href="fonts.css">
+<link rel="stylesheet" href="style.css">
+<script src="site.js" defer></script>
+</head><body>
+<button class="scroll-to-top" title="Scroll to top" aria-label="Scroll to top">⌃</button>
+<main id="main-content">
+<section class="hero"><div class="hero-body"><div class="container is-max-desktop"><div class="columns is-centered"><div class="column has-text-centered">
+<h1 class="title is-1 publication-title">Learning Wheel Motion Uncertainty<br>for Degeneracy-Aware LiDAR-Inertial Odometry on Quadrupedal Wheel-Legged Robots</h1>
+<div class="is-size-5 publication-authors">
+<span class="author-block">Hairuo Wei<sup>1</sup>,</span>
+<span class="author-block">Yunfan Ren<sup>2</sup>,</span>
+<span class="author-block">Renda Yang<sup>3</sup>,</span>
+<span class="author-block">Qiangsheng Huang<sup>3</sup>,</span>
+<span class="author-block">Zhongyu Li<sup>1,*</sup></span>
+</div>
+<div class="is-size-6 publication-authors" style="margin-top: 0.75rem;">
+<span class="author-block"><sup>1</sup>The Chinese University of Hong Kong</span>&nbsp;&nbsp;
+<span class="author-block"><sup>2</sup>Tongji University</span>&nbsp;&nbsp;
+<span class="author-block"><sup>3</sup>SEER Robotics</span>
+</div>
+<div class="column has-text-centered"><div class="publication-links">
+<span class="link-block"><a role="link" aria-disabled="true" class="external-link button is-normal is-rounded is-dark">Code <span class="resource-status">Coming soon</span></a></span>
+<span class="link-block"><a role="link" aria-disabled="true" class="external-link button is-normal is-rounded is-dark">arXiv <span class="resource-status">Coming soon</span></a></span>
+<span class="link-block"><a href="#video" class="external-link button is-normal is-rounded is-dark"><span class="icon" aria-hidden="true">▶</span><span>Video</span></a></span>
+</div></div>
+</div></div></div></div></section>
+<section class="hero teaser" id="video"><div class="container is-max-desktop"><div class="hero-body">
+<video class="project-video" id="main-demo-video" autoplay controls muted loop playsinline preload="metadata" poster="poster.jpg" aria-label="Research presentation video"><source src="video.mp4" type="video/mp4"></video>
+<h2 class="subtitle has-text-centered caption">LiDAR–inertial–kinematic odometry on a quadrupedal wheel-legged robot with learned wheel-motion uncertainty and degeneracy-aware projection.</h2>
+</div></div></section>
+<section class="section hero is-light project-section" id="overview"><div class="container is-max-desktop">
+<div class="columns is-centered has-text-centered"><div class="column is-four-fifths">
+<h2 class="title is-3">Method Overview</h2>
+<img class="pipeline-image" src="method.png" alt="Overview of the LiDAR–inertial–kinematic odometry framework" loading="lazy">
+<p class="caption has-text-centered">Given IMU, encoder, and LiDAR measurements, a learned covariance network (CovNet) predicts wheel-motion process covariances from proprioceptive history, while degeneracy-aware projection (DAP) suppresses direct LiDAR information along geometrically weak directions during the LiDAR update. The system then fuses these measurements to estimate the robot state and build a point cloud map.</p>
+</div></div>
+<div class="columns is-centered has-text-centered" style="margin-top: 2rem;"><div class="column is-four-fifths">
+<h2 class="title is-3">Abstract</h2><div class="content has-text-justified"><p>Wheel kinematics can support odometry for quadrupedal wheel-legged robots when LiDAR geometry provides weak motion constraints. However, slip and contact loss make rolling predictions unreliable, and contact state alone cannot determine their reliability across motion directions. We propose a tightly coupled LiDAR–inertial–kinematic odometry framework that retains analytical rolling predictions and learns per-wheel, direction-dependent process covariances from proprioceptive history. The estimator maintains moving wheel-center states, allowing the learned uncertainty to regulate the influence of rolling predictions through forward-kinematic corrections. Degeneracy-aware projection (DAP) complements this mechanism by suppressing LiDAR constraints along geometrically weak directions. The learned covariance network (CovNet) is trained through a differentiable filter using simulated velocity supervision and deployed on the real robot without fine-tuning. On the six room sequences with the highest degeneracy ratios in our indoor dataset, the method reduces mean per-sequence position root mean square error (RMSE) by 66.2% relative to FAST-LIO2 and by 31.0% relative to a fixed-covariance variant. In a severely degenerate corridor run, it achieves an endpoint position error of 0.198 m, compared with 7.531 m for FAST-LIO2. These results demonstrate robust odometry under challenging geometric and wheel-motion conditions. We plan to publicly release our code and multimodal dataset.</p></div>
+</div></div></div></section>
+<section class="section" id="BibTeX"><div class="container is-max-desktop content">
+<div class="bibtex-header"><h2 class="title">BibTeX</h2><button class="copy-bibtex-btn" title="Copy BibTeX to clipboard"><span aria-hidden="true">▣</span><span class="copy-text">Copy</span></button></div>
+<pre id="bibtex-code"><code>@unpublished{wei2026wheelmotionuncertainty,
+  title={Learning Wheel Motion Uncertainty for Degeneracy-Aware LiDAR-Inertial Odometry on Quadrupedal Wheel-Legged Robots},
+  author={Hairuo Wei and Yunfan Ren and Renda Yang and Qiangsheng Huang and Zhongyu Li},
+  year={2026},
+  note={Manuscript; arXiv submission pending}
+}</code></pre>
+</div></section>
+<section class="section project-section" id="acknowledgements"><div class="container is-max-desktop"><div class="columns is-centered has-text-centered"><div class="column is-four-fifths">
+<h2 class="title is-3">Acknowledgements</h2><p class="caption has-text-centered">This work was supported in part by the InnoHK initiative of the Innovation and Technology Commission of the Hong Kong Special Administrative Region Government via the Hong Kong Centre for Logistics Robotics. This work was also supported in part by project MMT-p8-26 of the Shun Hing Institute of Advanced Engineering, The Chinese University of Hong Kong.</p>
+</div></div></div></section>
+</main></body></html>

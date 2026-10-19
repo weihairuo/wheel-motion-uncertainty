@@ -1,0 +1,54 @@
+
+    .publication-title { line-height: 1.15; }
+    .project-section { padding-top: 3rem; padding-bottom: 3rem; }
+    .project-video {
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 0.5rem 1.5rem rgba(10, 10, 10, 0.12);
+      background: #000;
+    }
+    .pipeline-image, .ack-image {
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 0.5rem 1.5rem rgba(10, 10, 10, 0.08);
+    }
+    .caption {
+      margin-top: 0.85rem;
+      color: #4a4a4a;
+      font-size: 1rem;
+      line-height: 1.55;
+    }
+    .skill-group {
+      height: 100%;
+      padding: 1.25rem;
+      border-radius: 14px;
+      background: #fff;
+      box-shadow: 0 0.25rem 1rem rgba(10, 10, 10, 0.06);
+    }
+    .skill-group .title { margin-bottom: 1rem; }
+    .video-card { margin-bottom: 1rem; }
+    .video-card:last-child { margin-bottom: 0; }
+    .video-card p { margin-top: 0.35rem; font-size: 0.95rem; color: #555; }
+    .rally-video-card {
+      padding: 1.25rem;
+      border-radius: 14px;
+      background: #fff;
+      box-shadow: 0 0.25rem 1rem rgba(10, 10, 10, 0.06);
+      height: 100%;
+    }
+    .bibtex-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+    }
+    @media screen and (max-width: 768px) {
+      .publication-title { font-size: 2.1rem !important; }
+      .project-section { padding-top: 2rem; padding-bottom: 2rem; }
+    }
+  
+/* Keep unavailable resources visible without inventing destinations. */
+.publication-links .button[aria-disabled="true"] { cursor: default; }
+.publication-links .button[aria-disabled="true"]:hover { transform: none; background: var(--text-primary) !important; box-shadow: var(--shadow-md); }
+.resource-status { margin-left: .5em; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .hero, .section { animation: none; } }
