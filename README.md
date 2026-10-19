@@ -1,6 +1,6 @@
 # Learning Wheel Motion Uncertainty
 
-Paper project website: https://call-me-blue.github.io/wheel-motion-uncertainty/
+Paper project website: https://weihairuo.github.io/wheel-motion-uncertainty/
 
 Code and arXiv links are coming soon.
 
